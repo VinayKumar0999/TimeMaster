@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
 import '../App.css';
+import { useHistory } from "react-router-dom";
 const RegisterForm = () => {
+  const history = useHistory()
   const [initialState, setInitialValues] = useState({
     noOfDays: "",
     noOfSubjects: "",
@@ -10,7 +12,6 @@ const RegisterForm = () => {
   const [errors, setErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(false);
   useEffect(() => {
-    // Check form validity whenever initialState or errors change
     const hasErrors = Object.values(errors).some((error) => error.length > 0);
     const hasEmptyFields = initialState.subjectDetails.some(
       (detail) =>
@@ -87,6 +88,7 @@ const RegisterForm = () => {
     // Handle form submission
     if (isFormValid) {
       console.log("Form submitted successfully!", initialState);
+      history?.push('/notifications')
     } else {
       console.log("Form has errors, please fix them before submitting.");
     }

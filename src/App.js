@@ -1,27 +1,15 @@
 import React from "react";
 import {
     BrowserRouter as Router,
-    Switch,
     Routes,
     Route,
-    Link,
     useNavigate,
     Outlet,
 } from "react-router-dom";
 import Header from './common/HeaderComponent'
 import RegisterForm from './common/RegistrationForm'
 
-const Home = () => {
-    const navigate = useNavigate();
 
-    return (
-        <div>
-            <h2>Home Page</h2>
-            <button onClick={() =>
-                 navigate("/contact")}>Go to Contact</button>
-        </div>
-    );
-};
 
 const About = () => (
     <div>
