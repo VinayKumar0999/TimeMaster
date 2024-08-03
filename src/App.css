@@ -42,3 +42,19 @@
 .input-spacing-label{
   margin-left: 5px;
 }
+.header{
+  height: 40px;
+  background-color: lightblue;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time-registration-form{
+ gap:20px
+}
+.time-flex{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}

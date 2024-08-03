@@ -94,7 +94,7 @@ const RegisterForm = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="time-registration-form">
     <div className='common-input-field'> 
       <label>
         Number of Days:
