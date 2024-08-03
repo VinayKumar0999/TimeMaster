@@ -88,7 +88,7 @@ const RegisterForm = () => {
     // Handle form submission
     if (isFormValid) {
       console.log("Form submitted successfully!", initialState);
-      history?.push('/notifications')
+      history?.push('/notification')
     } else {
       console.log("Form has errors, please fix them before submitting.");
     }
