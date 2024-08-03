@@ -8,7 +8,6 @@ const RegisterForm = () => {
     noOfSubjects: "",
     subjectDetails: [{ subject: "", difficulty: "", noOfChapters: "" }],
   });
-
   const [errors, setErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(false);
   useEffect(() => {
