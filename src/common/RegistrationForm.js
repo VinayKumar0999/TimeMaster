@@ -1,8 +1,8 @@
 import { useState,useEffect } from "react";
 import '../App.css';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 const RegisterForm = () => {
-  const history = useHistory()
+  const navigate = useNavigate();
   const [initialState, setInitialValues] = useState({
     noOfDays: "",
     noOfSubjects: "",
@@ -88,7 +88,7 @@ const RegisterForm = () => {
     // Handle form submission
     if (isFormValid) {
       console.log("Form submitted successfully!", initialState);
-      history?.push('/notification')
+      navigate('/notification')
     } else {
       console.log("Form has errors, please fix them before submitting.");
     }

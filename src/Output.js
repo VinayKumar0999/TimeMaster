@@ -1,6 +1,8 @@
 
 import './App.css';
-import NotificationImportantIcon from '@mui/icons-material/NotificationImportant';
+import {
+  BellOutlined
+} from '@ant-design/icons';
 import { useState } from 'react';
 import WebSocketComponent from './Websocket';
 
@@ -13,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={handleBellIconClick}>
-        <NotificationImportantIcon />
+        <BellOutlined style={{ fontSize: '40px', color: '#08c' }}/>
       </button>
       {isWebsocketShow && <WebSocketComponent />}
       <table>
